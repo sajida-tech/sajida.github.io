@@ -21,8 +21,7 @@
 
     <div class="hero">
       <h1>Hello, I'm Sajida 👋</h1>
-      <p>Frontend Developer & Web Learner</p>
-
+     <p id="typing"></p>
       <a href="#projects" class="btn">View Projects</a>
     </div>
   </header>
@@ -88,4 +87,25 @@
   </footer>
 
 </body>
+  <script>
+
+const text = "Frontend Developer";
+let i = 0;
+
+function typing(){
+
+  if(i < text.length){
+
+    document.getElementById("typing").innerHTML += text.charAt(i);
+
+    i++;
+
+    setTimeout(typing,100);
+  }
+
+}
+
+typing();
+
+</script>
 </html>
